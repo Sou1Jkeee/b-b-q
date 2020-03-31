@@ -1,4 +1,10 @@
 module ApplicationHelper
+  def user_avatar(user)
+  # TODO user avatar upload
+    asset_path('avatar.webp')
+  end
+
+
   def declension(num, one, few, many)
     num %= 100
     num_dec = num % 10
