@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   before_action :set_current_user, except: %i[show]
 
   # GET /users/1
+  # .present? ? (render 'new') : (redirect_to root_path, notice 'такого пользователя не существует')
   def show
     @user = User.find(params[:id])
   end
@@ -26,8 +27,9 @@ class UsersController < ApplicationController
   def set_current_user
     @user = current_user
   end
-    # Only allow a trusted parameter "white list" through.
-    def user_params
-      params.require(:user).permit(:name, :email)
-    end
+
+  # Only allow a trusted parameter "white list" through.
+  def user_params
+    params.require(:user).permit(:name, :email)
+  end
 end

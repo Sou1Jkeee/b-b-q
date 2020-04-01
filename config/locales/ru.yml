@@ -16,11 +16,18 @@ ru:
         description: 'Описание'
   controllers:
     events:
-      created: 'Событие успешно создано'
-      updated: 'Событие успешно обновлено'
-      destroyed: 'Событие успешно удалено'
+      created: 'Событие создано'
+      updated: 'Событие обновлено'
+      destroyed: 'Событие удалено'
     users:
       updated: 'Информация обновлена'
+    comments:
+      created: 'Комментарий создан'
+      destroyed: 'Комментарий удален'
+      error: 'Ошибка с комментарием'
   app:
     name: 'B-B-Q!'
     company: 'Alexander Vladimirov'
+  comments:
+    comment:
+      destroy_confirm: 'Вы уверены что хотите удалить коментарий?'
