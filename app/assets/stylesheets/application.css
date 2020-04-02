@@ -60,3 +60,7 @@ body {
 .thumbnail-inner {
   padding: 20px 4px 4px;
 }
+
+.btn {
+  margin: 10px 0 5px;
+}
