@@ -4,6 +4,10 @@ module ApplicationHelper
     asset_path('avatar.webp')
   end
 
+  def fa_icon(icon_class)
+    content_tag 'span', '', class: "fa fa-#{icon_class}"
+  end
+
 
   def declension(num, one, few, many)
     num %= 100
