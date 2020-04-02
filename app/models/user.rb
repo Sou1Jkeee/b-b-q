@@ -14,10 +14,10 @@ class User < ApplicationRecord
   private
 
   def set_name
-    self.name = "Пользователь №#{rand(1000)}" if self.name.blank?
+    self.name = "#{I18n.t('activerecord.models.user')} #{rand(1000)}" if self.name.blank?
   end
 
   def link_subscriptions
-    subscription.where(user_id: nil, user_email: self.email).update_all(user_id: self.id)
+    subscriptions.where(user_id: nil, user_email: self.email).update_all(user_id: self.id)
   end
 end
