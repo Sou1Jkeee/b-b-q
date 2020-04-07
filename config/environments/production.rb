@@ -96,7 +96,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.perform_deliveries = true
 
-  ApplicationMailer.smtp_settings = {
+  ActionMailer::Base.smtp_settings = {
     address:              'smtp.sendgrid.net',
     port:                 '465',
     authentication:       :plain,
