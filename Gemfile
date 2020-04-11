@@ -14,7 +14,6 @@ gem 'russian'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
-
 gem 'twitter-bootstrap-rails'
 
 # Use Puma as the app server
