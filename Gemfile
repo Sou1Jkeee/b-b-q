@@ -6,7 +6,7 @@ ruby '2.6.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
 # Use jquery as the JavaScript librarys
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 
 gem 'devise'
 gem 'devise-i18n'
