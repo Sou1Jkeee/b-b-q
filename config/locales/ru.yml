@@ -3,6 +3,8 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+      photo: 'Фотография'
+
     attributes:
       user:
         email: 'Email'
@@ -15,81 +17,99 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
-        pincode: 'Пин-код'
       comment:
-        user_name: 'Ваше имя'
-        body: 'Комментарий'
+        body: 'Текст комментария:'
+        user_name: 'Имя:'
       subscription:
-        user_name: 'Ваше имя'
-        user_email: 'Ваш email'
+        user_name: 'Имя'
+        user_email: 'Email'
+        can_not_subscribe: 'Вы не можете подписаться на свое событие'
       photo:
         photo: 'Фотография'
+
   controllers:
     events:
-      created: 'Событие создано'
-      updated: 'Событие обновлено'
-      destroyed: 'Событие удалено'
-      wrong_pincode: 'Неверный пинкод!'
+      created: 'Вы создали новое мероприятие'
+      updated: 'Вы обновили мероприятие'
+      destroyed: 'Вы удалили мероприятие :('
     users:
-      updated: 'Информация обновлена'
+      updated: 'Вы обновили свой профиль'
     comments:
-      created: 'Комментарий создан'
       destroyed: 'Комментарий удален'
+      created: 'Ваш комментарий добавлен'
       error: 'Ошибка с комментарием'
     subscriptions:
       created: 'Вы подписаны на это событие'
       destroyed: 'Участник отписан'
       error: 'Подписка/отписка не сработала'
     photos:
-      error: 'Что-то не так с фотографией'
+      error: 'Что-то не так с фоткой'
       created: 'Вы добавили фотографию к событию'
-      destroyed: 'Вы удалили фотографию'
+      destroyed: 'Вы удалили фотку'
+
+  devise:
+    links:
+      back: 'Назад'
+      delete: 'Удалить'
+      create: 'Создать'
+      forgot_your_password: 'Забыли пароль?'
+      save: 'Сохранить'
+      sign_in: 'Войти'
+      sign_out: 'Выйти'
+      sign_up: 'Регистрация'
+    passwords:
+      edit:
+        change_my_password: 'Изменить мой пароль'
+        change_your_password: 'Изменить пароль'
+        confirm_new_password: 'Повторите новый пароль'
+        new_password: 'Новый пароль'
+      new:
+        forgot_your_password: 'Забыли пароль?'
+        send_me_reset_password_instructions: 'Выслать новый пароль'
+    registrations:
+      edit:
+        are_you_sure: 'Вы уверены?'
+        cancel_my_account: 'Удалить учетную запись'
+        currently_waiting_confirmation_for: 'Ожидается подтверждение адреса E-mail'
+        leave_blank_if_you_don_t_want_to_change_it: 'оставьте поле пустым, если не хотите его менять'
+        minimum_password_length: 'знаков минимум'
+        update: 'Обновить'
+        we_need_your_current_password_to_confirm_your_changes: 'введите текущий пароль для подтверждения изменений'
+      new:
+        sign_up: 'Регистрация'
+
+  messages:
+    not_saved:
+      few: 'Сохранение не удалось из-за %{count} ошибок:'
+      many: 'Сохранение не удалось из-за %{count} ошибок:'
+      one: 'Сохранение не удалось из-за %{count} ошибки:'
+      other: 'Сохранение не удалось из-за %{count} ошибки:'
+
+  user:
+    edit_profile: 'Редактировать профиль'
+    organized: 'Организовал:'
+    profile: 'Профиль'
+    user_has_not_organized_any_events_yet: 'Пользователь пока не организовал ни одного события'
+  event:
+    change: 'Изменить'
+    event_editing: 'Редактирование события'
+    events: 'События'
+    new_event: 'Создать новое событие'
+  comments:
+    comment:
+      destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
+      send: 'Отправить'
+      no_comments: 'Комментариев нет'
+  subscriptions:
+    subscription:
+      destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+      subscribe: 'Подписаться'
+      show_organizer: 'Организатор'
+      show_subscribed: 'Кто пойдет:'
+      email_used: 'уже используется'
+  photos:
+    upload: 'Загрузить'
+
   app:
     name: 'B-B-Q!'
     company: 'Alexander Vladimirov'
-  comments:
-    comment:
-      destroy_confirm: 'Вы уверены, что хотите удалить коментарий?'
-  subscriptions:
-    subscription:
-      destroy_confirm: 'Вы уверены, что хотите удалить подписку?'
-  event_mailer:
-    comment:
-      title: 'Новый комментарий'
-      author: 'Автор'
-      event: 'Событие'
-      datetime: 'Состоится'
-      owner: 'Организатор'
-    subscription:
-      title: 'Новая подписка'
-      name: 'Имя'
-      email: 'Email'
-      author: 'Автор'
-      event: 'Событие'
-      datetime: 'Состоится'
-      owner: 'Организатор'
-    devise:
-      links:
-        back: 'Назад'
-        delete: 'Удалить'
-        create: 'Создать'
-        forgot_your_password: 'Забыли пароль?'
-        save: 'Сохранить'
-        sign_in: 'Войти'
-        sign_out: 'Выйти'
-        sign_up: 'Регистрация'
-      passwords:
-        edit:
-          change_my_password: 'Изменить мой пароль'
-          change_your_password: 'Изменить пароль'
-          confirm_new_password: 'Повторите новый пароль'
-          new_password: 'Новый пароль'
-        new:
-          forgot_your_password: 'Забыли пароль?'
-          send_me_reset_password_instructions: 'Выслать новый пароль'
-      registrations:
-        edit:
-          are_you_sure: 'Вы уверены?'
-          cancel_my_account: 'Удалить учетную запись'
-          currently_waiting_confirmation_for: 'Ожидается подтверждение адреса E-mail'
-          leave_blank_if_you_don_t_want_to_change_it: 'оставьте поле пустым, если не хотите его менять'
