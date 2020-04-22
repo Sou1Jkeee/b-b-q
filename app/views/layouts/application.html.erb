@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: //ogp.me/ns#">
   <head>
 
     <meta property="og:title" content="<%= @event.title %>"/>
     <meta property="og:description" content="<%= @event.description %>"/>
     <meta property="og:image" content="<%= event_photo(@event) %>"/>
+    <meta property="og:image:" content="<%= event_photo(@event) %>"/>
     <meta property="og:image:width" content="400" />
     <meta property="og:image:height" content="300" />
     <meta property="og:type" content="event"/>
-    <meta property="og:url" content= "<%= link_to @event.id %>"/>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
