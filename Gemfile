@@ -13,7 +13,8 @@ gem 'devise-i18n'
 gem 'russian'
 gem 'carrierwave'
 gem 'rmagick'
-gem 'fog-aws'
+# gem 'fog-aws'
+gem 'cloudinary'
 gem 'twitter-bootstrap-rails'
 
 # Use Puma as the app server
